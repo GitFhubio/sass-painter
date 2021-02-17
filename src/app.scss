@@ -55,6 +55,7 @@ ul{
       height:auto;
     }
     span{
+      padding-right: $padding_unit / 4;
       color:$primarytextcolor;
     }
     i{
@@ -78,16 +79,20 @@ ul{
     ul li {
       padding:$padding_unit / 2 0;
     }
-    h2 span{
+    h2{
+      font-size:$font_size *2;
+      font-weight: $font_weight_title *1.5;
+      span{
       font-style: italic;
       color:$detailscolor;
-    }
+    }}
     p{
       padding-top:$padding_unit / 2;
       padding-bottom:$padding_unit;
     }
     .button{
       @include display-flex;
+      color: $primarycolor;
       justify-content: space-between;
       padding:$padding_unit / 2 $padding_unit * 1.5;
       width:250px;
@@ -162,47 +167,98 @@ nav{
   height:1400px;
   &-top{
     @include display-flex;
-    padding:0 $padding_unit * 9;
+    padding:0 $padding_unit * 12;
     flex-direction: column;
     align-items: center;
     height:$full_height * 0.6;
     background-repeat: no-repeat;
     background-image: url('../img/intro.jpg');
-    background-position: center 190px;
+    background-position: center 210px;
+    .play{
+    @include display-flex;
+    position:relative;
+    top:250px;
+    @media (max-width: 768px) {
+    top:-150px; }
+      width:150px;
+      height:150px;
+      background-color: $primarycolor;
+      opacity:0.7;
+      border-radius: 50%;
+      &:before {
+      content:"";
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50% , -50%);
+      width: 0;
+    	height: 0;
+    	border-top: 25px solid transparent;
+    	border-left: 50px solid $detailscolor;
+      border-bottom: 25px solid transparent;
+      }
+      &:hover::before{
+      border-left: 50px solid $primarytextcolor;
+      }
+    }
+
     h1{
-      font-size:$font_size * 3;
+      font-size:$font_size * 2.5;
       padding-top:$padding_unit * 3.5;
       padding-bottom:$padding_unit;
-      font-weight: $font_weight_title;
+      font-weight: $font_weight_title * 2.5;
     }
     p{
-      font-size: 20px;
+      font-size: $font_size * 1.2;
       text-align: center;
     }
   }
   &-bottom{
     @include display-flex;
+    @media (max-width: 768px) {
+    flex-direction:column; }
     height:60%;
     background-repeat: no-repeat;
-    background-size: 80%;
+    background-size: 90%;
     background-image: url('../img/flow.png');
+    @media (max-width: 768px) {
+     background:none;}
     background-position: center -10px;
     img{
       width:200px;
       height:auto;
+      @media (max-width: 768px) {
+      width:100px; }
     }
     &-left,&-center,&-right{
+      margin-top: $margin_unit * 6;
       padding:0 $padding_unit * 3.5;
       width:$full_width / 3;
       @include display-flex;
       flex-direction: column;
       align-items:center;
+      @media (max-width: 768px) {
+      margin-top: $margin_unit;
+      width:$full_width;
+      flex-direction:row;}
+      .description{
+        text-align: center;
+      }
       h1{
-        margin-top:$margin_unit * 2;
+        margin-top:$margin_unit * 4;
+        @media (max-width: 768px) {
+        margin-top: $margin_unit;
+        font-size: $font_size * 2;
+        margin-bottom: 0;}
+        font-size: $font_size * 2.8;
+        font-weight: $font_weight_title *1.6;
         margin-bottom: $margin_unit;
       }
       p{text-align: center;
         font-size: $font_size * 1.43;
+        @media (max-width: 768px) {
+        margin-top: 0;
+        font-size: $font_size}
       }
     }
   }
@@ -233,3 +289,5 @@ footer{
     }
   }
 }
+
+// prove di media query solo per la sezione coi 3 div affiancati
