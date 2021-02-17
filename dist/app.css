@@ -77,10 +77,14 @@ ul {
 }
 .jumbotron-left {
   display: flex;
-  flex-direction: column;
-  width: 66.6666666667%;
+  align-items: center;
   justify-content: center;
-  padding-left: 400px;
+  width: 66.6666666667%;
+}
+.jumbotron-left-content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 140px;
 }
 .jumbotron-left ul li {
   padding: 10px 0;
@@ -167,6 +171,12 @@ nav ul li {
   line-height: 50px;
   padding: 0 30px;
   font-size: 20.02px;
+}
+@media (max-width: 768px) {
+  nav ul li {
+    padding: 0 10px;
+    font-size: 14px;
+  }
 }
 
 .main {
