@@ -1,0 +1,227 @@
+@import "variables";
+@import "mixins";
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+ul{
+list-style: none;
+}
+
+.wrapper{
+  width:100%;
+  height:100%;
+  max-width:100vw;
+}
+.header{
+  width:100%;
+  padding:0 40px;
+  height:140px;
+  background-color: $primarycolor;
+  ul li{
+    display:inline-block;
+  }
+  &-top{
+    height:50%;
+    @include display-flex;
+    align-items:center;
+    justify-content:flex-end;
+    li{
+      padding:0 20px;
+    }
+    span{
+      padding-left:5px;
+      color:$tertiarycolor;
+    }
+    i{
+      color:$secondarycolor;
+    }
+  }
+  &-bottom{
+    @include display-flex;
+    height:50%;
+        align-items:center;
+    li{
+        padding:0 20px;
+      }
+    img{
+      width:120px;
+      height:auto;
+    }
+    span{
+      color:#fff;
+    }
+    i{
+      color:$tertiarycolor;
+    }
+  }
+}
+
+.jumbotron{
+  background-image: url('../img/hero.jpg');
+  background-position: -350px;
+  padding:0 30px;
+  @include display-flex;
+height:500px;
+  &-left {
+    @include display-flex;
+    flex-direction: column;
+    width:66.66%;
+    justify-content:center;
+    padding-left:400px;
+    ul li {
+      padding:10px 0;
+    }
+    p{
+      padding-top:10px;
+      padding-bottom:20px;
+    }
+    .button{
+      @include display-flex;
+      justify-content: space-between;
+      padding:10px 30px;
+      width:250px;
+      align-items: center;
+      border:1px solid black;
+      div{
+        @include display-flex;
+        flex-direction: column;
+      }
+    }
+  }
+  &-right {
+      @include display-flex;
+      align-items: flex-end;
+      justify-content:center;
+    width:33.33%;
+    .BuyNow{
+      @include display-flex;
+      padding:20px 20px;
+      background-color: $primarycolor;
+      width:100%;
+      height:90%;
+      &-left{
+        margin-top: 40px;
+        width:50%;
+        @include display-flex;
+        flex-direction: column;
+        color:#fff;
+        .button{
+          background-color: $secondarycolor;
+          display:inline-block;
+          text-align: center;
+          width:150px;
+           text-transform: uppercase;
+           padding:10px 30px;
+           color:#fff;
+        }
+        .price{
+          font-size: 30px;
+        }
+        .download{
+          text-transform: uppercase;
+          color:$tertiarycolor;
+          margin:15px 0;
+        }
+      }
+      &-right{
+        width:50%;
+        text-align: right;
+      }
+    }
+  }
+}
+nav{
+  width:100%;
+  background-color: $tertiarycolor;
+  height:50px;
+  ul{
+    width:100%;
+    margin:0 auto;
+    text-align: center;
+  }
+  ul li{
+    display:inline-block;
+    line-height: 50px;
+    padding:0 10px;
+    font-size: 20px;
+  }
+}
+.main{
+  width:100%;
+  height:1400px;
+ &-top{
+   @include display-flex;
+   padding:0 180px;
+   flex-direction: column;
+   align-items: center;
+   height:60%;
+   background-repeat: no-repeat;
+    background-image: url('../img/intro.jpg');
+    background-position: center 190px;
+    h1{
+      padding-top:70px;
+      padding-bottom:20px;
+    }
+    p{
+      font-size: 20px;
+      text-align: center;
+    }
+ }
+ &-bottom{
+      @include display-flex;
+   height:60%;
+   background-repeat: no-repeat;
+   background-size: 80%;
+    background-image: url('../img/flow.png');
+    background-position: center -10px;
+    img{
+      width:200px;
+      height:auto;
+    }
+    &-left,&-center,&-right{
+      padding:0 70px;
+      width:33.33%;
+      @include display-flex;
+      flex-direction: column;
+      align-items:center;
+      h1{
+       margin-top:30px;
+       margin-bottom: 15px;
+      }
+      p{text-align: center;
+        font-size: 20px;
+      }
+    }
+ }
+
+}
+footer{
+.footer-top{
+  @include display-flex;
+  justify-content: space-around;
+  align-items: center;
+  width:100%;
+  height:300px;
+  background-color: $tertiarycolor;
+  li{
+    padding:5px 0;
+  }
+  li:first-child{
+    font-weight:bold;
+  }
+}
+.footer-bottom{
+    background-color: $tertiarycolor;
+  @include display-flex;
+  justify-content: flex-end;
+  ul li{
+    display:inline-block;
+    padding:20px 10px;
+  }
+}
+}
