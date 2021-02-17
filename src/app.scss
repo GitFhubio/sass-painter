@@ -247,7 +247,7 @@ nav{
       h1{
         margin-top:$margin_unit * 4;
         @media (max-width: 768px) {
-        margin-top: $margin_unit;
+        margin-top: 0;
         font-size: $font_size * 2;
         margin-bottom: 0;}
         font-size: $font_size * 2.8;
