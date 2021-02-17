@@ -10,7 +10,8 @@
   clear: both;
 }
 
-@mixin before-after {
-  font-weight: bold;
-  font-family: $font_awesome;
+@mixin reset {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
 }
