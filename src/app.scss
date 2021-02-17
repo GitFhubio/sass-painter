@@ -166,6 +166,7 @@ nav{
   width:$full_width;
   height:1400px;
   &-top{
+    position:relative;
     @include display-flex;
     padding:0 $padding_unit * 12;
     flex-direction: column;
@@ -176,10 +177,10 @@ nav{
     background-position: center 210px;
     .play{
     @include display-flex;
-    position:relative;
-    top:250px;
-    @media (max-width: 768px) {
-    top:-150px; }
+    position:absolute;
+    top:50%;
+    left:50%;
+          transform: translate(-50% , -50%);
       width:150px;
       height:150px;
       background-color: $primarycolor;
