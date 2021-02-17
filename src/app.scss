@@ -1,17 +1,17 @@
 @import "variables";
 @import "mixins";
 *{
-@include reset;
+  @include reset;
 }
 body{
-font-family:$font_family;
-
+  font-family:$font_family;
+  font-size: $font_size;
 }
 a{
   text-decoration: none;
 }
 ul{
-list-style: none;
+  list-style: none;
 }
 
 .wrapper{
@@ -28,7 +28,7 @@ list-style: none;
     display:inline-block;
   }
   &-top{
-   height:$full_height / 2;
+    height:$full_height / 2;
     @include display-flex;
     align-items:center;
     justify-content:flex-end;
@@ -45,17 +45,17 @@ list-style: none;
   }
   &-bottom{
     @include display-flex;
-   height:$full_height / 2;
-        align-items:center;
+    height:$full_height / 2;
+    align-items:center;
     li{
-        padding:0 $padding_unit;
-      }
+      padding:0 $padding_unit;
+    }
     img{
       width:120px;
       height:auto;
     }
     span{
-      color:#fff;
+      color:$primarytextcolor;
     }
     i{
       color:$tertiarycolor;
@@ -78,6 +78,10 @@ list-style: none;
     ul li {
       padding:$padding_unit / 2 0;
     }
+    h2 span{
+      font-style: italic;
+      color:$detailscolor;
+    }
     p{
       padding-top:$padding_unit / 2;
       padding-bottom:$padding_unit;
@@ -88,7 +92,7 @@ list-style: none;
       padding:$padding_unit / 2 $padding_unit * 1.5;
       width:250px;
       align-items: center;
-      border:1px solid black;
+      border:1px solid $primarycolor;
       div{
         @include display-flex;
         flex-direction: column;
@@ -96,10 +100,10 @@ list-style: none;
     }
   }
   &-right {
-      @include display-flex;
-      align-items: flex-end;
-      justify-content:center;
-  width:$full_width / 3;
+    @include display-flex;
+    align-items: flex-end;
+    justify-content:center;
+    width:$full_width / 3;
     .BuyNow{
       @include display-flex;
       padding:$padding_unit $padding_unit;
@@ -111,18 +115,18 @@ list-style: none;
         width:$full_width / 2;
         @include display-flex;
         flex-direction: column;
-        color:#fff;
+        color:$primarytextcolor;
         .button{
           background-color: $secondarycolor;
           display:inline-block;
           text-align: center;
           width:150px;
-           text-transform: uppercase;
+          text-transform: uppercase;
           padding:$padding_unit / 2 $padding_unit * 1.5;
-           color:#fff;
+          color:$primarytextcolor;
         }
         .price{
-          font-size: 30px;
+          font-size: $font_size * 2.15;
         }
         .download{
           text-transform: uppercase;
@@ -142,43 +146,45 @@ nav{
   background-color: $tertiarycolor;
   height:50px;
   ul{
-  width:$full_width;
+    width:$full_width;
     margin:0 auto;
     text-align: center;
   }
   ul li{
     display:inline-block;
     line-height: 50px;
-      padding:0 $padding_unit * 1.5;
-    font-size: 20px;
+    padding:0 $padding_unit * 1.5;
+    font-size: $font_size * 1.43;
   }
 }
 .main{
   width:$full_width;
   height:1400px;
- &-top{
-   @include display-flex;
-   padding:0 $padding_unit * 9;
-   flex-direction: column;
-   align-items: center;
-   height:60%;
-   background-repeat: no-repeat;
+  &-top{
+    @include display-flex;
+    padding:0 $padding_unit * 9;
+    flex-direction: column;
+    align-items: center;
+    height:$full_height * 0.6;
+    background-repeat: no-repeat;
     background-image: url('../img/intro.jpg');
     background-position: center 190px;
     h1{
+      font-size:$font_size * 3;
       padding-top:$padding_unit * 3.5;
       padding-bottom:$padding_unit;
+      font-weight: $font_weight_title;
     }
     p{
       font-size: 20px;
       text-align: center;
     }
- }
- &-bottom{
-      @include display-flex;
-   height:60%;
-   background-repeat: no-repeat;
-   background-size: 80%;
+  }
+  &-bottom{
+    @include display-flex;
+    height:60%;
+    background-repeat: no-repeat;
+    background-size: 80%;
     background-image: url('../img/flow.png');
     background-position: center -10px;
     img{
@@ -187,43 +193,43 @@ nav{
     }
     &-left,&-center,&-right{
       padding:0 $padding_unit * 3.5;
-        width:$full_width / 3;
+      width:$full_width / 3;
       @include display-flex;
       flex-direction: column;
       align-items:center;
       h1{
-       margin-top:$margin_unit * 2;
-       margin-bottom: $margin_unit;
+        margin-top:$margin_unit * 2;
+        margin-bottom: $margin_unit;
       }
       p{text-align: center;
-        font-size: 20px;
+        font-size: $font_size * 1.43;
       }
     }
- }
+  }
 
 }
 footer{
-.footer-top{
-  @include display-flex;
-  justify-content: space-around;
-  align-items: center;
-  width:$full_width ;
-  height:300px;
-  background-color: $tertiarycolor;
-  li{
-    padding:$padding_unit / 4 0;
-  }
-  li:first-child{
-    font-weight:bold;
-  }
-}
-.footer-bottom{
+  .footer-top{
+    @include display-flex;
+    justify-content: space-around;
+    align-items: center;
+    width:$full_width ;
+    height:300px;
     background-color: $tertiarycolor;
-  @include display-flex;
-  justify-content: flex-end;
-  ul li{
-    display:inline-block;
-    padding:$padding_unit $padding_unit / 2;
+    li{
+      padding:$padding_unit / 4 0;
+    }
+    li:first-child{
+      font-weight:bold;
+    }
   }
-}
+  .footer-bottom{
+    background-color: $tertiarycolor;
+    @include display-flex;
+    justify-content: flex-end;
+    ul li{
+      display:inline-block;
+      padding:$padding_unit $padding_unit / 2;
+    }
+  }
 }

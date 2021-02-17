@@ -6,6 +6,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  font-size: 14px;
 }
 
 a {
@@ -42,7 +43,7 @@ ul {
 }
 .header-top span {
   padding-left: 5px;
-  color: #ccc;
+  color: #B8B8B8;
 }
 .header-top i {
   color: #0096FF;
@@ -63,7 +64,7 @@ ul {
   color: #fff;
 }
 .header-bottom i {
-  color: #ccc;
+  color: #B8B8B8;
 }
 
 .jumbotron {
@@ -83,6 +84,10 @@ ul {
 .jumbotron-left ul li {
   padding: 10px 0;
 }
+.jumbotron-left h2 span {
+  font-style: italic;
+  color: #8030A9;
+}
 .jumbotron-left p {
   padding-top: 10px;
   padding-bottom: 20px;
@@ -93,7 +98,7 @@ ul {
   padding: 10px 30px;
   width: 250px;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid #000;
 }
 .jumbotron-left .button div {
   display: flex;
@@ -129,11 +134,11 @@ ul {
   color: #fff;
 }
 .jumbotron-right .BuyNow-left .price {
-  font-size: 30px;
+  font-size: 30.1px;
 }
 .jumbotron-right .BuyNow-left .download {
   text-transform: uppercase;
-  color: #ccc;
+  color: #B8B8B8;
   margin: 15px 0;
 }
 .jumbotron-right .BuyNow-right {
@@ -143,7 +148,7 @@ ul {
 
 nav {
   width: 100%;
-  background-color: #ccc;
+  background-color: #B8B8B8;
   height: 50px;
 }
 nav ul {
@@ -155,7 +160,7 @@ nav ul li {
   display: inline-block;
   line-height: 50px;
   padding: 0 30px;
-  font-size: 20px;
+  font-size: 20.02px;
 }
 
 .main {
@@ -173,8 +178,10 @@ nav ul li {
   background-position: center 190px;
 }
 .main-top h1 {
+  font-size: 42px;
   padding-top: 70px;
   padding-bottom: 20px;
+  font-weight: 900;
 }
 .main-top p {
   font-size: 20px;
@@ -205,7 +212,7 @@ nav ul li {
 }
 .main-bottom-left p, .main-bottom-center p, .main-bottom-right p {
   text-align: center;
-  font-size: 20px;
+  font-size: 20.02px;
 }
 
 footer .footer-top {
@@ -214,7 +221,7 @@ footer .footer-top {
   align-items: center;
   width: 100%;
   height: 300px;
-  background-color: #ccc;
+  background-color: #B8B8B8;
 }
 footer .footer-top li {
   padding: 5px 0;
@@ -223,7 +230,7 @@ footer .footer-top li:first-child {
   font-weight: bold;
 }
 footer .footer-bottom {
-  background-color: #ccc;
+  background-color: #B8B8B8;
   display: flex;
   justify-content: flex-end;
 }
