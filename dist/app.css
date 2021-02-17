@@ -184,12 +184,17 @@ nav ul li {
   background-image: url("../img/intro.jpg");
   background-position: center 210px;
 }
+@media (max-width: 768px) {
+  .main-top {
+    padding: 0 0;
+  }
+}
 .main-top .play {
   display: flex;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   width: 150px;
   height: 150px;
   background-color: #000;
